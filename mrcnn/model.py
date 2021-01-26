@@ -2357,7 +2357,7 @@ class MaskRCNN():
         ]
         h5_add =  "PL.h5"
         print(':::::::::::::::::::::; ',h5_add)
-        model_checkpoint = ModelCheckpoint(h5_add, monitor='val_loss', verbose=1, save_best_only=True)
+        model_checkpoint = ModelCheckpoint(h5_add, monitor='val_loss', verbose=1, save_best_only=True, save_weights_only=True)
         callbacks = [  model_checkpoint ]
         # Add custom callbacks to the list
         if custom_callbacks:
